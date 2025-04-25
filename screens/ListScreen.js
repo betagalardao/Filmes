@@ -64,14 +64,49 @@
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20 },
-  input: { height: 40, borderColor: '#ddd', borderWidth: 1, marginBottom: 20, paddingLeft: 10 },
-  card: { flexDirection: 'row', marginBottom: 20, borderBottomWidth: 1, borderBottomColor: '#ddd', paddingBottom: 10 },
-  poster: { width: 100, height: 150, marginRight: 20 },
-  info: { flex: 1, justifyContent: 'center' },
-  movieTitle: { fontSize: 18, fontWeight: 'bold' },
-  movieYear: { fontSize: 14, color: '#888' },
-  error: { color: 'red', textAlign: 'center', marginTop: 20 },
+  container: { 
+    flex: 1, 
+    padding: 20 
+  },
+  input: { 
+    height: 40, 
+    borderColor: '#ddd', 
+    borderWidth: 1, 
+    marginBottom: 20, 
+    paddingLeft: 10 
+  },
+  card: { 
+    flexDirection: 'row', 
+    marginBottom: 20, 
+    borderBottomWidth: 1, 
+    borderBottomColor: '#ddd', 
+    paddingBottom: 10 
+  },
+  poster: { 
+    width: 100, 
+    height: 150, 
+    marginRight: 20 
+  },
+  info: { 
+    flex: 1, 
+    justifyContent: 'center' 
+  },
+  movieTitle: { 
+    fontSize: 18, 
+    fontWeight: 'bold' 
+  },
+  movieYear: { 
+    fontSize: 14, 
+    color: '#888' 
+  },
+  error: { 
+    color: 'red', 
+    textAlign: 'center', 
+    marginTop: 20 
+  },
+  loading: {
+    marginTop: 20 //add para ter um carregamento visual
+  }
 });
 
 export default MovieListScreen;

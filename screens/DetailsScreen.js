@@ -6,6 +6,7 @@ const MovieDetailsScreen = ({ route }) => {
   const { imdbID } = route.params; 
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchDetails = async () => {
@@ -24,6 +25,10 @@ const MovieDetailsScreen = ({ route }) => {
 
   if (loading) {
     return <ActivityIndicator size="large" style={{ flex: 1 }} />;
+  }
+
+  if(error){
+    return <Text style={styles.error}>{error}</Text>;
   }
 
   if (!movie) {
@@ -69,6 +74,11 @@ const styles = StyleSheet.create({
     lineHeight: 25,
     textAlign: 'justify' 
   },
+  error: {
+    color: 'red',
+    textAlign: 'center',
+    marginTop: 20
+  }
 });
 
 export default MovieDetailsScreen;
